@@ -25,7 +25,5 @@ for x in range(0, 10):
     customer['email'] = customer['initial'].lower() + "." + customer['lastname'].lower() + "@" + random.choice(emailProviders)
     customers.append(customer)
 
-print customers
-
 with open('c:/temp/out.txt', 'w') as outfile:
-    json.dump(customers, outfile)
+    json.dump(customers, outfile, sort_keys = True, indent = 4)
